@@ -1,5 +1,5 @@
 //
-//  NSString+HTML.m
+//  NSString+MWHTML.m
 //  MWFeedParser
 //
 //  Copyright (c) 2010 Michael Waterfall
@@ -27,10 +27,10 @@
 //  THE SOFTWARE.
 //
 
-#import "NSString+HTML.h"
+#import "NSString+MWHTML.h"
 #import "GTMNSString+HTML.h"
 
-@implementation NSString (HTML)
+@implementation NSString (MWHTML)
 
 #pragma mark -
 #pragma mark Class Methods

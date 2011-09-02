@@ -1,19 +1,19 @@
 //
-//  NSDate+InternetDateTime.m
+//  NSDate+MWInternetDateTime.m
 //  MWFeedParser
 //
 //  Created by Michael Waterfall on 07/10/2010.
 //  Copyright 2010 Michael Waterfall. All rights reserved.
 //
 
-#import "NSDate+InternetDateTime.h"
+#import "NSDate+MWInternetDateTime.h"
 
 // Always keep the formatter around as they're expensive to instantiate
 static NSDateFormatter *_internetDateTimeFormatter = nil;
 
 // Good info on internet dates here:
 // http://developer.apple.com/iphone/library/qa/qa2010/qa1480.html
-@implementation NSDate (InternetDateTime)
+@implementation NSDate (MWInternetDateTime)
 
 // Instantiate single date formatter
 + (NSDateFormatter *)internetDateTimeFormatter {

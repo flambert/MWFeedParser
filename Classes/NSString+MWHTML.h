@@ -1,5 +1,5 @@
 //
-//  NSString+HTML.h
+//  NSString+MWHTML.h
 //  MWFeedParser
 //
 //  Copyright (c) 2010 Michael Waterfall
@@ -31,7 +31,7 @@
 
 // Dependant upon GTMNSString+HTML
 
-@interface NSString (HTML)
+@interface NSString (MWHTML)
 
 // Instance Methods
 - (NSString *)stringByConvertingHTMLToPlainText;

@@ -1,5 +1,5 @@
 //
-//  NSDate+InternetDateTime.h
+//  NSDate+MWInternetDateTime.h
 //  MWFeedParser
 //
 //  Created by Michael Waterfall on 07/10/2010.
@@ -16,7 +16,7 @@ typedef enum {
 } DateFormatHint;
 
 // A category to parse internet date & time strings
-@interface NSDate (InternetDateTime)
+@interface NSDate (MWInternetDateTime)
 
 // Get date from RFC3339 or RFC822 string
 // - A format/specification hint can be used to speed up, 

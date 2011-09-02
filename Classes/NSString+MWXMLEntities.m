@@ -1,5 +1,5 @@
 //
-//  NSString+XMLEntities.m
+//  NSString+MWXMLEntities.m
 //  MWFeedParser
 //
 //  Copyright (c) 2010 Michael Waterfall
@@ -27,12 +27,12 @@
 //  THE SOFTWARE.
 //
 
-#import "NSString+XMLEntities.h"
+#import "NSString+MWXMLEntities.h"
 
 // THIS CLASS IS DEPRECIATED 03/08/2010
 // REPLACED BY NSString+HTML
 
-@implementation NSString (XMLEntities)
+@implementation NSString (MWXMLEntities)
 
 - (NSString *)stringByDecodingXMLEntities {
 	return [self stringByDecodingHTMLEntities];

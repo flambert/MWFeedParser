@@ -1,5 +1,5 @@
 //
-//  NSString+XMLEntities.h
+//  NSString+MWXMLEntities.h
 //  MWFeedParser
 //
 //  Copyright (c) 2010 Michael Waterfall
@@ -30,12 +30,12 @@
 #import <Foundation/Foundation.h>
 
 // Import new HTML category
-#import "NSString+HTML.h"
+#import "NSString+MWHTML.h"
 
 // THIS CLASS IS DEPRECIATED 03/08/2010
 // REPLACED BY NSString+HTML
 
-@interface NSString (XMLEntities)
+@interface NSString (MWXMLEntities)
 
 // Old Instance Methods
 - (NSString *)stringByDecodingXMLEntities;
