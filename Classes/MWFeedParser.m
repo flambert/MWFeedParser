@@ -29,8 +29,8 @@
 
 #import "MWFeedParser.h"
 #import "MWFeedParser_Private.h"
-#import "NSString+HTML.h"
-#import "NSDate+InternetDateTime.h"
+#import "NSString+MWHTML.h"
+#import "NSDate+MWInternetDateTime.h"
 
 // NSXMLParser Logging
 #if 0 // Set to 1 to enable XML parsing logs
@@ -622,6 +622,7 @@
 					else if ([currentPath isEqualToString:@"/rss/channel/item/pubDate"]) { if (processedText.length > 0) item.date = [NSDate dateFromInternetDateTimeString:processedText formatHint:DateFormatHintRFC822]; processed = YES; }
 					else if ([currentPath isEqualToString:@"/rss/channel/item/enclosure"]) { [self createEnclosureFromAttributes:currentElementAttributes andAddToItem:item]; processed = YES; }
 					else if ([currentPath isEqualToString:@"/rss/channel/item/dc:date"]) { if (processedText.length > 0) item.date = [NSDate dateFromInternetDateTimeString:processedText formatHint:DateFormatHintRFC3339]; processed = YES; }
+					else if ([currentPath isEqualToString:@"/rss/channel/item/media:thumbnail"]) { item.thumbnail = [currentElementAttributes objectForKey:@"url"]; processed = YES; }
 				}
 				
 				// Info

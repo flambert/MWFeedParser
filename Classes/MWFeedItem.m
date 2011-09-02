@@ -34,6 +34,7 @@
 @implementation MWFeedItem
 
 @synthesize identifier, title, link, date, updated, summary, content, enclosures;
+@synthesize thumbnail;
 
 #pragma mark NSObject
 
@@ -55,6 +56,7 @@
 	[summary release];
 	[content release];
 	[enclosures release];
+	[thumbnail release];
 	[super dealloc];
 }
 
@@ -70,6 +72,7 @@
 		summary = [[decoder decodeObjectForKey:@"summary"] retain];
 		content = [[decoder decodeObjectForKey:@"content"] retain];
 		enclosures = [[decoder decodeObjectForKey:@"enclosures"] retain];
+        thumbnail = [[decoder decodeObjectForKey:@"thumbnail"] retain];
 	}
 	return self;
 }
@@ -83,6 +86,7 @@
 	if (summary) [encoder encodeObject:summary forKey:@"summary"];
 	if (content) [encoder encodeObject:content forKey:@"content"];
 	if (enclosures) [encoder encodeObject:enclosures forKey:@"enclosures"];
+	if (thumbnail) [encoder encodeObject:thumbnail forKey:@"thumbnail"];
 }
 
 @end
